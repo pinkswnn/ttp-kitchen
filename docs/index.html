@@ -4,27 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TTP Kitchen | Chef CP</title>
-  <meta name="description" content="TTP Kitchen (Trust The Process). Where Fine Dining Becomes A Lifestyle. Chef CP." />
+  <meta name="description" content="TTP Kitchen (Trust The Process). Chef CP. Chef-crafted food for real moments." />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="app.js"></script>
 </head>
+
 <body>
+  <!-- ambient -->
   <div class="fx fx-grain" aria-hidden="true"></div>
   <div class="fx fx-vignette" aria-hidden="true"></div>
 
   <header class="header" role="banner">
     <div class="wrap header__inner">
-      <a class="brand" href="#top" aria-label="TTP Kitchen Home">
-        <img class="brand__logo" src="assets/logo-ttp.png" alt="TTP Kitchen logo">
-        <span>
-          <span class="brand__name">TTP Kitchen</span>
-          <span class="brand__sub">Chef CP</span>
-        </span>
+      <a class="wordmark" href="#top" aria-label="TTP Kitchen Home">
+        <span class="wordmark__name">TTP Kitchen</span>
+        <span class="wordmark__sub">Chef CP</span>
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a href="#flow">The Flow</a>
-        <a href="#chef">CHEF</a>
+        <a href="#flow">How It Moves</a>
+        <a href="#chef">Chef</a>
         <a href="#start">Start</a>
       </nav>
     </div>
@@ -32,49 +31,65 @@
 
   <main id="top" class="wrap" role="main">
 
+    <!-- HERO -->
     <section class="hero">
-      <div class="panel reveal">
+      <div class="hero__top reveal">
+        <img class="hero__logo" src="assets/logo-ttp.png" alt="TTP Kitchen logo">
+        <div class="hero__topline">TTP (Trust The Process).</div>
+      </div>
+
+      <div class="panel panel--hero reveal">
         <div class="hero__grid">
+
+          <!-- LEFT -->
           <div class="hero__left">
-            <div class="brandlock">
-              <img class="brandlock__logo" src="assets/logo-ttp.png" alt="TTP Kitchen logo">
-              <div>
-                <div class="brandlock__name">TTP Kitchen</div>
-                <div class="brandlock__sub">Chef CP</div>
-                <div class="brandlock__ttp">TTP (Trust The Process).</div>
-              </div>
+            <div class="kicker">
+              <span class="kdot" aria-hidden="true"></span>
+              IT’S NOT FINE DINING — IT’S A LIFESTYLE
             </div>
 
-            <div class="kicker"><span class="kdot" aria-hidden="true"></span>IT’S NOT FINE DINING — IT’S A LIFESTYLE</div>
-
-            <h1 class="h1">Where Fine Dining Becomes A Lifestyle.</h1>
+            <h1 class="h1">Chef-Crafted Food. Real Moment.</h1>
 
             <p class="sub">
-              If you care about timing, energy, and how it all lands — you’re in the right place.
+              You bring the people. CP brings the timing, the flavor, the energy.
             </p>
 
-            <div class="chips" role="group" aria-label="Choose a lane">
+            <div class="chips" role="group" aria-label="Pick your experience">
               <button class="chip is-active" type="button" data-lane="Private Chef" aria-pressed="true">PRIVATE CHEF</button>
               <button class="chip" type="button" data-lane="Catering" aria-pressed="false">CATERING</button>
-              <button class="chip" type="button" data-lane="Pre-Orders" aria-pressed="false">PRE-ORDERS</button>
+              <button class="chip" type="button" data-lane="Pre-Orders" aria-pressed="false">PLATE DROPS</button>
             </div>
 
-            <div id="laneHelp" class="lanehelp">For nights that deserve a memory.</div>
+            <div id="laneHelp" class="lanehelp">Choose what you’re hungry for — CP will confirm the next move.</div>
 
+            <!-- HERO: max 2 CTAs -->
             <div class="hero__cta">
-              <a id="heroSms" class="btn btn--gold" href="#"><span class="dot" aria-hidden="true"></span>TEXT TO LOCK IN</a>
-              <a id="heroEmail" class="btn" href="#">EMAIL</a>
+              <a id="heroSms" class="btn btn--primary" href="#">
+                <span class="btn__sheen" aria-hidden="true"></span>
+                TEXT TO LOCK IN
+              </a>
+              <a id="heroEmail" class="btn btn--secondary" href="#">EMAIL</a>
+            </div>
+
+            <div class="microproof" aria-label="What to expect">
+              <span class="microproof__pill">CLEAN TIMING</span>
+              <span class="microproof__pill">REAL HOSPITALITY</span>
+              <span class="microproof__pill">PLATES THAT HIT</span>
             </div>
           </div>
 
+          <!-- RIGHT -->
           <div class="hero__right" aria-hidden="true">
             <img id="heroImg" class="hero__img" src="assets/chef-portrait.jpg" alt="">
             <div class="hero__overlay"></div>
+            <div class="hero__stamp">TTP</div>
           </div>
+
         </div>
       </div>
     </section>
 
+    <!-- KITCHEN STRIP -->
     <section class="section">
       <div class="panel reveal">
         <div class="panel__head">
@@ -89,7 +104,7 @@
             <div class="shot__cap">
               <div>
                 <p class="cap__title">THE MOMENT</p>
-                <p class="cap__line">Not just a meal. A moment people talk about after.</p>
+                <p class="cap__line">The kind of food people remember after.</p>
               </div>
             </div>
           </article>
@@ -97,49 +112,40 @@
       </div>
     </section>
 
+    <!-- FLOW -->
     <section id="flow" class="section">
       <div class="panel reveal">
         <div class="panel__head">
-          <h2 class="h2">The Flow</h2>
-          <p class="p">Send the basics. CP sets the tone.</p>
+          <h2 class="h2">How It Moves</h2>
+          <p class="p">Simple. Smooth. Done right.</p>
         </div>
 
-        <div class="grid3">
-          <div class="card flowcard">
-            <div class="flowtop">
-              <div class="num">01</div>
-              <div class="tag">KEEP IT CLEAN</div>
-            </div>
-            <div class="cardtitle">Pick A Lane</div>
-            <p class="cardline">Private chef. Catering. Drops. No extra explaining.</p>
+        <div class="flowtable">
+          <div class="flowrow">
+            <div class="flowcell flowcell--num">01</div>
+            <div class="flowcell flowcell--title">Pick Your Experience</div>
+            <div class="flowcell flowcell--desc">Private chef, catering, or plate drops.</div>
           </div>
-
-          <div class="card flowcard">
-            <div class="flowtop">
-              <div class="num">02</div>
-              <div class="tag">SEND BASICS</div>
-            </div>
-            <div class="cardtitle">Drop The Details</div>
-            <p class="cardline">Day, headcount, area. That’s enough to start.</p>
+          <div class="flowrow">
+            <div class="flowcell flowcell--num">02</div>
+            <div class="flowcell flowcell--title">Tell CP The Details</div>
+            <div class="flowcell flowcell--desc">Date, guests, area — plus anything important.</div>
           </div>
-
-          <div class="card flowcard">
-            <div class="flowtop">
-              <div class="num">03</div>
-              <div class="tag">LET IT LAND</div>
-            </div>
-            <div class="cardtitle">Feel The Moment</div>
-            <p class="cardline">Timing handled. Hospitality on time. Food that means something.</p>
+          <div class="flowrow">
+            <div class="flowcell flowcell--num">03</div>
+            <div class="flowcell flowcell--title">Lock It In</div>
+            <div class="flowcell flowcell--desc">CP confirms the next step. You get the moment.</div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CHEF -->
     <section id="chef" class="section">
       <div class="panel reveal">
         <div class="panel__head">
-          <h2 class="h2">CHEF</h2>
-          <p class="p">The process isn’t random. It’s built.</p>
+          <h2 class="h2">Chef</h2>
+          <p class="p">Comfort elevated. Standards built in.</p>
         </div>
 
         <div class="chefgrid">
@@ -154,32 +160,34 @@
           </div>
 
           <div class="card chefbox">
-            <div class="chefword">WHAT PEOPLE FEEL</div>
+            <div class="chefword">WHAT IT FEELS LIKE</div>
             <p class="p" style="margin-top:12px;">
-              Calm in the room. Clean timing. Real hospitality. Plates that look like art and feel like home.
+              Calm in the room. Clean timing. Food that feels like home — just elevated.
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- START -->
     <section id="start" class="section">
       <div class="panel reveal">
         <div class="panel__head">
           <h2 class="h2">Start</h2>
-          <p class="p">Choose your lane. Drop what you know. CP takes it from there.</p>
+          <p class="p">Tell CP what you want — we’ll get it locked in.</p>
         </div>
 
         <div class="cols">
           <div class="card span7 cleanCard">
             <div class="formgrid">
               <div>
-                <label class="label" for="lane">Lane</label>
-                <select id="lane" class="input">
+                <label class="label" for="lane">Pick Your Experience</label>
+                <select id="lane" class="input" aria-label="Pick your experience">
                   <option value="Private Chef">Private Chef</option>
                   <option value="Catering">Catering</option>
-                  <option value="Pre-Orders">Pre-Orders</option>
+                  <option value="Pre-Orders">Plate Drops</option>
                 </select>
+                <div class="formhint">This is where your moment starts.</div>
               </div>
 
               <div id="fieldNameWrap" hidden>
@@ -204,7 +212,7 @@
 
               <div id="fieldNotesWrap" class="full">
                 <label class="label" for="notes">Notes (Optional)</label>
-                <textarea id="notes" class="input" placeholder="Anything CP should know?"></textarea>
+                <textarea id="notes" class="input" placeholder="Vibe, allergies, preferences — anything CP should know."></textarea>
               </div>
 
               <div id="fieldUpdatesWrap" class="full" hidden>
@@ -214,16 +222,17 @@
             </div>
 
             <div class="start__actions">
-              <a id="startSms" class="btn btn--gold" href="#"><span class="dot" aria-hidden="true"></span>TEXT TO LOCK IN</a>
-              <a id="startEmail" class="btn" href="#">EMAIL</a>
+              <a id="startSms" class="btn btn--primary" href="#">
+                <span class="btn__sheen" aria-hidden="true"></span>
+                TEXT TO LOCK IN
+              </a>
+              <a id="startEmail" class="btn btn--secondary" href="#">EMAIL</a>
             </div>
           </div>
 
           <div class="card span5 cleanCard">
-            <div style="display:flex; justify-content:space-between; align-items:center; gap:12px;">
-              <div style="font-weight:900; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">
-                Stay Connected
-              </div>
+            <div class="sideTop">
+              <div class="sideTitle">Stay Connected</div>
 
               <a class="iconbtn" href="https://www.instagram.com/ttp_kitchen" target="_blank" rel="noreferrer" aria-label="Instagram">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -236,12 +245,12 @@
             </div>
 
             <p class="p" style="margin-top:14px;">
-              Not a bunch of back and forth. Just a clean start — and a chef who knows how to run the moment.
+              Follow the plates. Catch the drops. See the standard.
             </p>
 
-            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-              <a class="btn" href="https://ig.me/m/ttp_kitchen" target="_blank" rel="noreferrer">DM</a>
-              <a class="btn" href="mailto:info@ttpkitchen.com">EMAIL</a>
+            <div class="sideActions">
+              <a class="btn btn--secondary" href="https://ig.me/m/ttp_kitchen" target="_blank" rel="noreferrer">DM</a>
+              <a class="btn btn--secondary" href="mailto:info@ttpkitchen.com">EMAIL</a>
             </div>
           </div>
         </div>
@@ -262,9 +271,13 @@
 
   </main>
 
+  <!-- mobile sticky -->
   <div class="sticky" role="region" aria-label="Quick actions">
     <div class="wrap sticky__inner">
-      <a id="barSms" class="btn btn--gold" href="#"><span class="dot" aria-hidden="true"></span>TEXT TO LOCK IN</a>
+      <a id="barSms" class="btn btn--primary" href="#">
+        <span class="btn__sheen" aria-hidden="true"></span>
+        TEXT TO LOCK IN
+      </a>
       <a class="iconbtn" href="https://ig.me/m/ttp_kitchen" target="_blank" rel="noreferrer" aria-label="Instagram DM">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z"></path>
@@ -273,6 +286,7 @@
     </div>
   </div>
 
+  <!-- toast -->
   <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
     <div class="toast__inner"><span class="toast__dot" aria-hidden="true"></span><span id="toastText">READY</span></div>
   </div>
