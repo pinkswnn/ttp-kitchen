@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TTP Kitchen | Chef CP</title>
+  <meta name="description" content="TTP Kitchen (Trust The Process). Where Fine Dining Becomes a Lifestyle. Private chef and catering in DFW." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TTP Kitchen",
+    "description": "Where Fine Dining Becomes a Lifestyle. Chef CP.",
+    "telephone": "+1-469-885-7589",
+    "email": "info@ttpkitchen.com",
+    "url": "https://ttpkitchen.com",
+    "sameAs": ["https://www.instagram.com/ttp_kitchen"],
+    "areaServed": "Dallas–Fort Worth",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ambience -->
+  <div class="fx fx-grain" aria-hidden="true"></div>
+  <div class="fx fx-vignette" aria-hidden="true"></div>
+
+  <header class="header" role="banner">
+    <div class="wrap header__inner">
+      <a class="brand" href="#top" aria-label="TTP Kitchen Home">
+<span class="brand__name">TTP Kitchen</span>
+        <span class="brand__sub">Chef CP</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#experiences">Experiences</a>
+        <a class="nav__link" href="#service">Run Of Show</a>
+        <a class="nav__link" href="#start">Start</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap" role="main">
+
+    <!-- HERO (A: cover + overlay cards) -->
+    <section class="hero">
+      <div class="hero__frame panel reveal">
+        <div class="hero__grid">
+          <!-- cover -->
+          <div class="hero__cover" aria-hidden="true">
+            <img id="heroImg" class="hero__img" src="assets/chef-plating.jpg" alt="">
+            <img class="hero__img hero__img--pop" src="assets/chef-plating.jpg" alt="" aria-hidden="true">
+            <div class="hero__overlay"></div>
+<div class="hero__logoFloat"><img src="assets/logo-ttp.png" alt="TTP Kitchen logo"></div>
+          </div>
+
+          <!-- content -->
+          <div class="hero__content">
+            <div class="hero__logoWrap logo-in">
+              <img class="hero__logo" src="assets/logo-ttp.png" alt="TTP Kitchen logo">
+            </div>
+
+            
+
+            <h1 class="h1 reveal-stagger">Where Fine Dining Becomes A Lifestyle.</h1>
+
+            <p class="sub reveal-stagger">
+              Food that brings people together — with timing, presence, and care you can feel.
+            </p>
+            <div id="timeNote" class="timeNote" aria-live="polite"></div>
+
+            <div class="hero__cta reveal-stagger">
+              <a id="heroSms" class="btn btn--primary" href="#">
+                <span class="btn__sheen" aria-hidden="true"></span>
+                TEXT TO LOCK IN
+              </a>
+              <a id="heroEmail" class="btn btn--secondary" href="#">EMAIL</a>
+            </div>
+
+            <div class="signatureLine reveal-stagger" aria-label="Signature">
+  <span>Southern Soul</span><span class="sigDot" aria-hidden="true"></span><span>Classic Comfort</span><span class="sigDot" aria-hidden="true"></span><span>Fine Dining Finesse</span>
+</div>
+
+            <!-- overlay: experience picker card -->
+            <div class="overlayCard reveal-stagger" aria-label="Pick your experience">
+              <div class="overlayCard__top">
+                <div class="overlayCard__title">Pick Your Experience</div>
+                <div class="overlayCard__tag"><img src="assets/logo-ttp.png" alt="TTP logo"></div>
+              </div>
+
+              <div class="picker" role="group" aria-label="Experience options">
+                <button class="pick is-active" type="button" data-experience="Private Chef" aria-pressed="true">
+                  <span class="pick__k">PRIVATE CHEF</span>
+                  <span class="pick__m">Dinner, hosted right.</span>
+                </button>
+                <button class="pick" type="button" data-experience="Catering" aria-pressed="false">
+                  <span class="pick__k">CATERING</span>
+                  <span class="pick__m">Gatherings that feel handled.</span>
+                </button>
+                <button class="pick" type="button" data-experience="Plate Drops" aria-pressed="false">
+                  <span class="pick__k">PLATE DROPS</span>
+                  <span class="pick__m">Limited drops, real flavor.</span>
+                </button>
+              </div>
+
+              <div id="experienceHelp" class="helpLine">A dinner that feels like you did it right.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES (tiles + tabs + comparison table) -->
+    <section id="experiences" class="section">
+      <div class="panel reveal">
+        <div class="panel__head center">
+          <h2 class="h2">Experiences</h2>
+          <p class="p">Pick the vibe. we bring the standard.</p>
+        </div>
+
+        <!-- tabs (desktop) -->
+        <div class="tabs" role="tablist" aria-label="Experience filters">
+          <button class="tab is-active" type="button" data-filter="all" role="tab" aria-selected="true">ALL</button>
+          <button class="tab" type="button" data-filter="Private Chef" role="tab" aria-selected="false">PRIVATE CHEF</button>
+          <button class="tab" type="button" data-filter="Catering" role="tab" aria-selected="false">CATERING</button>
+          <button class="tab" type="button" data-filter="Plate Drops" role="tab" aria-selected="false">PLATE DROPS</button>
+        </div>
+
+        <!-- tiles -->
+        <div class="grid3 tiles" aria-live="polite">
+          <article class="tile" data-type="Private Chef">
+            <div class="tile__top">
+              <div class="tile__title">Private Chef</div>
+              <div class="badge">MOST BOOKED</div>
+            </div>
+            <p class="tile__text">Plated comfort with finesse — hosted in your space.</p>
+            <details class="details mobileOnly">
+              <summary>DETAILS</summary>
+              <div class="details__body">
+                Menu built around your moment. CP handles the flow — you stay present.
+              </div>
+            </details>
+            <button class="btn btn--ghost btn--tile" type="button" data-choose="Private Chef">CHOOSE THIS</button>
+          </article>
+
+          <article class="tile" data-type="Catering">
+            <div class="tile__top">
+              <div class="tile__title">Catering</div>
+              <div class="badge badge--soft">CLEAN EXECUTION</div>
+            </div>
+            <p class="tile__text">Flavor + organization for events that matter.</p>
+            <details class="details mobileOnly">
+              <summary>DETAILS</summary>
+              <div class="details__body">
+                Reliable timing. Elevated plates. A setup that feels professional.
+              </div>
+            </details>
+            <button class="btn btn--ghost btn--tile" type="button" data-choose="Catering">CHOOSE THIS</button>
+          </article>
+
+          <article class="tile" data-type="Plate Drops">
+            <div class="tile__top">
+              <div class="tile__title">Plate Drops</div>
+              <div class="badge badge--soft">LIMITED</div>
+            </div>
+            <p class="tile__text">Drops that sell out because they hit every time.</p>
+            <details class="details mobileOnly">
+              <summary>DETAILS</summary>
+              <div class="details__body">
+                Get notified. Grab your plate. Taste what the hype can’t fake.
+              </div>
+            </details>
+            <button class="btn btn--ghost btn--tile" type="button" data-choose="Plate Drops">CHOOSE THIS</button>
+          </article>
+        </div>
+
+        <!-- comparison table (theme-y) -->
+        <div class="compareWrap">
+          <div class="compareTitle">Quick Compare</div>
+          <div class="compare">
+            <div class="compare__row compare__head">
+              <div></div>
+              <div>PRIVATE CHEF</div>
+              <div>CATERING</div>
+              <div>PLATE DROPS</div>
+            </div>
+
+            <div class="compare__row">
+              <div class="compare__k">Best For</div>
+              <div>Date nights, birthdays, celebrations</div>
+              <div>Small events & gatherings</div>
+              <div>Quick pick-ups & limited drops</div>
+            </div>
+
+            <div class="compare__row">
+              <div class="compare__k">Vibe</div>
+              <div>Hosted + elevated</div>
+              <div>Clean + organized</div>
+              <div>Fast + satisfying</div>
+            </div>
+
+            <div class="compare__row">
+              <div class="compare__k">You Do</div>
+              <div>Show up. Enjoy.</div>
+              <div>Invite. Celebrate.</div>
+              <div>Order. Pick up.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THE SERVICE (chef language instead of "How it Moves") -->
+    <section id="service" class="section">
+      <div class="panel reveal">
+        <div class="panel__head center">
+          <h2 class="h2">Run Of Show</h2>
+          <p class="p">How CP runs it — smooth, intentional, on time.</p>
+        </div>
+
+        <div class="serviceTable">
+          <div class="serviceRow">
+            <div class="svcNum">01</div>
+            <div class="svcTitle">Set The Experience</div>
+            <div class="svcDesc">Pick your experience. That sets the menu and the motion.</div>
+          </div>
+          <div class="serviceRow">
+            <div class="svcNum">02</div>
+            <div class="svcTitle">Confirm The Details</div>
+            <div class="svcDesc">Date, guests, area — We reply with next steps and availability.</div>
+          </div>
+          <div class="serviceRow">
+            <div class="svcNum">03</div>
+            <div class="svcTitle">Let It Land</div>
+            <div class="svcDesc">The room settles. The plates hit. People remember the night.</div>
+          </div>
+        </div>
+
+        <!-- FAQ (optional, mobile only) -->
+        <div class="faq mobileOnly">
+          <details class="faq__item">
+            <summary>DO YOU TRAVEL?</summary>
+            <div class="faq__body">DFW is home. Surrounding areas by request.</div>
+          </details>
+          <details class="faq__item">
+            <summary>HOW FAST DO YOU RESPOND?</summary>
+            <div class="faq__body">As soon as CP can confirm the best next move.</div>
+          </details>
+          <details class="faq__item">
+            <summary>CAN I SHARE ALLERGIES / PREFERENCES?</summary>
+            <div class="faq__body">Yes. Put it in notes — CP reads it.</div>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CHEF (portrait section 4) -->
+    <section id="chef" class="section">
+      <div class="panel reveal">
+        <div class="panel__head center">
+          <h2 class="h2">Chef CP</h2>
+          <p class="p">Built from survival. Turned into therapy. Now it’s legacy work.</p>
+        </div>
+
+        <div class="chefSplit">
+          <div class="chefMedia" aria-hidden="true">
+            <img class="chefMedia__img" src="assets/chef-portrait.jpg" alt="">
+            <div class="chefMedia__overlay"></div>
+          </div>
+
+          <div class="chefInfo">
+            <div class="chefCard">
+              <div class="chefCard__title">CHEF CP</div>
+              <div class="chefGrid">
+                <div>Craft</div>
+                <div>Hospitality</div>
+                <div>Elevation</div>
+                <div>Flavor</div>
+              </div>
+            </div>
+
+            <div class="chefCard chefCard--soft">
+              <div class="chefCard__title">What It Feels Like</div>
+              <p class="p tight">
+                Calm in the room. Clean timing. Food that feels like home — just elevated.
+              </p>
+              <div class="stampRow">
+                <span class="stamp">PRESENCE</span>
+                <span class="stamp">CONSISTENCY</span>
+                <span class="stamp">LEGACY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- START (form -> auto-populates SMS/email) -->
+    <section id="start" class="section">
+      <div class="panel reveal">
+        <div class="panel__head center">
+          <h2 class="h2">Start Here</h2>
+          <p class="p">Pick your experience. Tell us what you want. Lock it in.</p>
+        </div>
+
+        <div class="cols">
+          <div class="col col--form">
+            <div class="formCard">
+              <div class="formTop">
+                <div class="formTop__k">Pick Your Experience</div>
+                <div id="summaryChip" class="summaryChip">PRIVATE CHEF</div>
+              </div>
+
+              <div class="formGrid">
+                <div class="field">
+                  <label class="label" for="experience">Pick Your Experience</label>
+                  <select id="experience" class="input" aria-label="Pick your experience">
+                    <option value="Private Chef">Private Chef</option>
+                    <option value="Catering">Catering</option>
+                    <option value="Plate Drops">Plate Drops</option>
+                  </select>
+                </div>
+
+                <div id="fieldNameWrap" class="field" hidden>
+                  <label class="label" for="name">What Should We Call You?</label>
+                  <input id="name" class="input" type="text" placeholder="Your name">
+                </div>
+
+                <div id="fieldDateWrap" class="field">
+                  <label class="label" for="date">When’s The Moment?</label>
+                  <input id="date" class="input" type="date" placeholder="Select a date">
+</div>
+
+                <div id="fieldGuestsWrap" class="field">
+                  <label class="label" for="guests">Who’s Coming?</label>
+                  <select id="guests" class="input" aria-label="Guests">
+<option value="" selected disabled>Select guests</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31+">31+</option>
+</select>
+</div>
+
+                <div id="fieldAreaWrap" class="field field--full">
+                  <label class="label" for="area">Where Are We Pulling Up?</label>
+                  <input id="area" class="input" type="text" placeholder="What part of town?">
+                </div>
+
+                <div id="fieldNotesWrap" class="field field--full">
+                  <label class="label" for="notes">Anything We Should Know?</label>
+                  <textarea id="notes" class="input" placeholder="Vibe, allergies, preferences — anything CP should know."></textarea>
+                </div>
+
+                <div id="fieldUpdatesWrap" class="field field--full" hidden>
+                  <label class="label" for="updates">Anything We Should Know?</label>
+                  <textarea id="updates" class="input" placeholder="Pickup area, dietary notes, or what you want on the list."></textarea>
+                </div>
+              </div>
+
+              <div class="actions">
+                <a id="startSms" class="btn btn--primary" href="#">
+                  <span class="btn__sheen" aria-hidden="true"></span>
+                  TEXT TO LOCK IN
+                </a>
+                <a id="startEmail" class="btn btn--secondary" href="#">EMAIL</a>
+              </div>
+
+              <div class="fineprint">Once you tap, your message is ready — just send.</div>
+            </div>
+          </div>
+
+          <div class="col col--side">
+            <div class="sideCard">
+              <div class="sideCard__top">
+                <div class="sideCard__title">Stay Connected</div>
+                <a class="iconbtn" href="https://www.instagram.com/ttp_kitchen" target="_blank" rel="noreferrer" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="7" y="7" width="10" height="10" rx="3"></rect>
+                    <path d="M17 7h.01"></path>
+                    <path d="M12 10a2 2 0 1 0 0 4a2 2 0 0 0 0-4z"></path>
+                    <path d="M7 7h10a5 5 0 0 1 5 5v0a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5v0a5 5 0 0 1 5-5z"></path>
+                  </svg>
+                </a>
+              </div>
+
+              <p class="p tight">
+                Drops. Behind the scenes. The plates. The standard.
+              </p>
+
+              <div class="sideActions">
+                <a class="btn btn--ghost" href="https://ig.me/m/ttp_kitchen" target="_blank" rel="noreferrer">DM</a>
+                <a class="btn btn--ghost" href="mailto:info@ttpkitchen.com">EMAIL</a>
+              </div>
+
+              <div class="sideDivider"></div>
+
+              <div class="nextUp">
+                <div class="nextUp__k">Next Step</div>
+                <div class="nextUp__v">We confirm availability + next move.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="exit reveal">
+  <div class="exitLine">When food is done right, everything else slows down.</div>
+  <div class="logoDivider" aria-hidden="true"><img src="assets/logo-ttp.png" alt="TTP logo"></div>
+</section>
+
+<footer class="footer">
+      <div class="footer__inner">
+        <div>© <span id="year"></span> TTP Kitchen • Chef CP</div>
+        <div class="credit">
+          SITE DEVELOPED BY
+          <a href="https://hustleignite.pinkswann.com/" target="_blank" rel="noopener">
+            PINK SWANN BEAUTY | HIGH CLASS HUSTLE
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <div id="focusOverlay" class="focusOverlay" aria-hidden="true"></div>
+
+
+  <!-- sticky (mobile) -->
+  <div class="sticky" role="region" aria-label="Quick actions">
+    <div class="wrap sticky__inner">
+      <a id="barSms" class="btn btn--primary" href="#">
+        <span class="btn__sheen" aria-hidden="true"></span>
+        TEXT TO LOCK IN
+      </a>
+      <a class="iconbtn" href="https://ig.me/m/ttp_kitchen" target="_blank" rel="noreferrer" aria-label="Instagram DM">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+    <div class="toast__inner"><span class="toast__dot" aria-hidden="true"></span><span id="toastText">READY</span></div>
+  </div>
+</body>
+</html>
