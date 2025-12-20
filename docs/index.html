@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0b0b"/>
+  <title>TTP KITCHEN — CHEF CP</title>
+  <meta name="description" content="WHERE FINE DINING BECOMES A LIFESTYLE. DFW Private Chef • Catering • Plate Drops. Text to lock in." />
+  <link rel="preload" as="image" href="assets/chef-hero.jpg">
+  <link rel="preload" as="image" href="assets/logo-ttp-transparent.png">
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "TTP Kitchen",
+    "alternateName": "Trust The Process Kitchen",
+    "founder": {
+      "@type": "Person",
+      "name": "Chef CP"
+    },
+    "servesCuisine": ["Private Chef","Catering","Prepared Meals"],
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Dallas–Fort Worth"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "info@ttpkitchen.com"
+    },
+    "sameAs": ["https://www.instagram.com/ttp_kitchen"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#start">Skip</a>
+
+  <!-- Bottom sticky bar (logo included) -->
+  <div class="stickybar" role="navigation" aria-label="Quick Actions">
+    <img class="stickybar__logo" src="assets/logo-ttp-transparent.png" alt="TTP Kitchen logo" />
+    <a class="btn btn--primary stickybar__cta" id="stickyText" href="#">TEXT TO LOCK IN</a>
+    <a class="stickybar__icon" href="https://ig.me/m/ttp_kitchen" target="_blank" rel="noopener" aria-label="Instagram DM">IG</a>
+  </div>
+
+  <div class="focusOverlay" id="focusOverlay" aria-hidden="true"></div>
+
+  <header class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__grain" aria-hidden="true"></div>
+
+    <div class="wrap hero__content">
+      <!-- Prominent logo up top -->
+      <div class="hero__logoWrap">
+        <img class="hero__logo" src="assets/logo-ttp-transparent.png" alt="TTP Kitchen logo" />
+      </div>
+
+      <div class="hero__copy">
+        <p class="hero__eyebrow">DFW • PRIVATE CHEF • CATERING • PLATE DROPS</p>
+
+        <h1 class="hero__title">WHERE FINE DINING BECOMES A LIFESTYLE</h1>
+
+        <!-- Emotional hook: fast + scannable -->
+        <div class="hero__hooks" aria-label="What you get">
+          <span>HANDLED</span>
+          <span>CLEAN EXECUTION</span>
+          <span>LEGACY ON A PLATE</span>
+        </div>
+
+        <!-- CHEF (Option B: horizontal row) -->
+        <div class="chefRow" aria-label="CHEF pillars">
+          <div class="chefPill"><span class="chefLetter">C</span><span class="chefWord">RAFT</span></div>
+          <div class="chefPill"><span class="chefLetter">H</span><span class="chefWord">OSPITALITY</span></div>
+          <div class="chefPill"><span class="chefLetter">E</span><span class="chefWord">LEVATION</span></div>
+          <div class="chefPill"><span class="chefLetter">F</span><span class="chefWord">LAVOR</span></div>
+        </div>
+
+        <div class="hero__ctaRow">
+          <a class="btn btn--primary" id="heroText" href="#">TEXT TO LOCK IN</a>
+          <a class="btn btn--ghost" id="heroEmail" href="#">EMAIL</a>
+        </div>
+
+        <!-- Experience selector -->
+        <div class="experience" aria-label="Pick your experience">
+          <div class="seg" role="tablist" aria-label="Experience selector">
+            <button class="seg__btn" data-exp="private" role="tab" aria-selected="true">PRIVATE CHEF</button>
+            <button class="seg__btn" data-exp="catering" role="tab" aria-selected="false">CATERING</button>
+            <button class="seg__btn" data-exp="drops" role="tab" aria-selected="false">PLATE DROPS</button>
+          </div>
+          <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="hero__scrollHint" aria-hidden="true">↓ START HERE</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--tight">
+      <div class="wrap">
+        <h2 class="section__title">RUN OF SERVICE</h2>
+        <div class="ros">
+          <div class="ros__step">
+            <div class="ros__num">01</div>
+            <div>
+              <h3 class="h3">PICK THE EXPERIENCE</h3>
+              <p class="micro">PRIVATE CHEF, CATERING, OR PLATE DROPS.</p>
+            </div>
+          </div>
+          <div class="ros__step">
+            <div class="ros__num">02</div>
+            <div>
+              <h3 class="h3">DROP THE DETAILS</h3>
+              <p class="micro">DATE • GUESTS • AREA. NOTES OPTIONAL.</p>
+            </div>
+          </div>
+          <div class="ros__step">
+            <div class="ros__num">03</div>
+            <div>
+              <h3 class="h3">TEXT TO LOCK IN</h3>
+              <p class="micro">TEXT US. WE FOLLOW UP FAST.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <h2 class="section__title">PICK YOUR EXPERIENCE</h2>
+        <div class="cards">
+          <article class="card reveal">
+            <h3 class="h3">PRIVATE CHEF</h3>
+            <p class="micro">IN-HOME DINING. ELEVATED PLATING. CALM ENERGY.</p>
+            <button class="card__pick" data-pick="private">SELECT</button>
+          </article>
+          <article class="card reveal">
+            <h3 class="h3">CATERING</h3>
+            <p class="micro">SMALL EVENTS. CLEAN FLOW. SOLID TIMING.</p>
+            <button class="card__pick" data-pick="catering">SELECT</button>
+          </article>
+          <article class="card reveal">
+            <h3 class="h3">PLATE DROPS</h3>
+            <p class="micro">LIMITED DROPS + PREORDERS. GET THE ALERTS.</p>
+            <button class="card__pick" data-pick="drops">SELECT</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap chef">
+        <div class="chef__imgWrap reveal">
+          <img class="chef__img" src="assets/chef-portrait.jpg" alt="Chef CP portrait" loading="lazy" />
+        </div>
+        <div class="chef__copy reveal">
+          <h2 class="section__title">CHEF CP</h2>
+          <p class="micro">DISCIPLINE IN THE KITCHEN. WARMTH AT THE TABLE. STANDARD ALWAYS.</p>
+          <div class="pillRow">
+            <span class="pill">QUALITY OVER HYPE</span>
+            <span class="pill">CONSISTENCY IS CURRENCY</span>
+            <span class="pill">PEOPLE FIRST</span>
+            <span class="pill">LEGACY WORK</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <h2 class="section__title">QUICK COMPARE</h2>
+
+        <div class="compare compare--desktop reveal">
+          <table class="table" aria-label="Experience comparison">
+            <thead>
+              <tr>
+                <th>EXPERIENCE</th><th>BEST FOR</th><th>YOU SEND</th><th>WE FOLLOW UP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PRIVATE CHEF</strong></td>
+                <td>DINNERS • CELEBRATIONS</td>
+                <td>DATE • GUESTS • AREA</td>
+                <td>MENU DIRECTION • QUOTE</td>
+              </tr>
+              <tr>
+                <td><strong>CATERING</strong></td>
+                <td>SMALL EVENTS • GROUP MEALS</td>
+                <td>DATE • GUESTS • AREA</td>
+                <td>SERVICE STYLE • QUOTE</td>
+              </tr>
+              <tr>
+                <td><strong>PLATE DROPS</strong></td>
+                <td>PREORDERS • ALERTS</td>
+                <td>NAME (OPTIONAL UPDATES)</td>
+                <td>DROP DETAILS • PICKUP</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="compare compare--mobile">
+          <div class="compare__stack">
+            <div class="compareCard reveal">
+              <h3 class="h3">PRIVATE CHEF</h3>
+              <p class="micro"><b>BEST FOR:</b> DINNERS • CELEBRATIONS</p>
+              <p class="micro"><b>YOU SEND:</b> DATE • GUESTS • AREA</p>
+              <p class="micro"><b>WE FOLLOW UP:</b> MENU • QUOTE</p>
+            </div>
+            <div class="compareCard reveal">
+              <h3 class="h3">CATERING</h3>
+              <p class="micro"><b>BEST FOR:</b> SMALL EVENTS • GROUP MEALS</p>
+              <p class="micro"><b>YOU SEND:</b> DATE • GUESTS • AREA</p>
+              <p class="micro"><b>WE FOLLOW UP:</b> STYLE • QUOTE</p>
+            </div>
+            <div class="compareCard reveal">
+              <h3 class="h3">PLATE DROPS</h3>
+              <p class="micro"><b>BEST FOR:</b> PREORDERS • ALERTS</p>
+              <p class="micro"><b>YOU SEND:</b> NAME (OPTIONAL UPDATES)</p>
+              <p class="micro"><b>WE FOLLOW UP:</b> DROP DETAILS</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="start">
+      <div class="wrap">
+        <h2 class="section__title">START HERE</h2>
+        <p class="micro">FAST QUESTIONS. TEXT OR EMAIL.</p>
+
+        <div class="panel reveal" id="panel">
+          <form id="leadForm" novalidate>
+            <div class="grid">
+              <div class="field" data-field="name">
+                <label for="name">NAME</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="YOUR NAME" />
+                <div class="hint" id="hint-name"></div>
+              </div>
+
+              <div class="field" data-field="date">
+                <label for="date">DATE</label>
+                <input id="date" name="date" type="date" />
+                <div class="hint" id="hint-date"></div>
+              </div>
+
+              <div class="field" data-field="guests">
+                <label for="guests">GUESTS</label>
+                <select id="guests" name="guests">
+                  <option value="">SELECT</option>
+                  <option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31+">31+</option>
+                </select>
+                <div class="hint" id="hint-guests"></div>
+              </div>
+
+              <div class="field" data-field="area">
+                <label for="area">AREA</label>
+                <input id="area" name="area" type="text" autocomplete="address-level2" placeholder="CITY / NEIGHBORHOOD" />
+                <div class="hint" id="hint-area"></div>
+              </div>
+
+              <div class="field field--full" data-field="notes">
+                <label for="notes">NOTES (OPTIONAL)</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="DIETARY • OCCASION • VIBE"></textarea>
+              </div>
+
+              <div class="field field--full" data-field="updates">
+                <label for="updates">UPDATES (OPTIONAL)</label>
+                <input id="updates" name="updates" type="text" placeholder="EMAIL OR HANDLE FOR DROPS" />
+              </div>
+            </div>
+
+            <div class="actions">
+              <a class="btn btn--primary" id="formText" href="#">TEXT TO LOCK IN</a>
+              <a class="btn btn--ghost" id="formEmail" href="#">EMAIL</a>
+              <a class="btn btn--link" href="https://www.instagram.com/ttp_kitchen" target="_blank" rel="noopener" class="igIcon" aria-label="Instagram">IG</a>
+            </div>
+
+            <p class="micro" id="microCopy"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>BUILT BY <a href="https://hustleignite.pinkswann.com" target="_blank" rel="noopener">PINK SWANN BEAUTY | HIGH CLASS HUSTLE</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
