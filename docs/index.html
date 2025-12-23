@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+  <script>document.documentElement.classList.add("js");</script>
+<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TTP Kitchen | Chef CP</title>
+  <meta name="description" content="WHERE FINE DINING BECOMES A LIFESTYLE. Southern soul, classic comfort, fine dining finesse — served with discipline." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="canonical" href="https://ttpkitchen.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TTP Kitchen | Chef CP" />
+  <meta property="og:description" content="TTP Kitchen isn’t a fine dining experience — it’s a lifestyle. Where flavor tells a story words sometimes can’t." />
+  <meta property="og:url" content="https://ttpkitchen.com/" />
+  <meta property="og:image" content="https://ttpkitchen.com/assets/chef-plating.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TTP Kitchen | Chef CP" />
+  <meta name="twitter:description" content="TTP Kitchen isn’t a fine dining experience — it’s a lifestyle. Where flavor tells a story words sometimes can’t." />
+  <meta name="twitter:image" content="https://ttpkitchen.com/assets/chef-plating.jpg" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="stylesheet" href="styles.css?v=11" />
+  <script defer src="app.js?v=11"></script>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "TTP Kitchen",
+  "alternateName": "Trust The Process Kitchen",
+  "url": "https://ttpkitchen.com/",
+  "email": "info@ttpkitchen.com",
+  "telephone": "+1-469-885-7589",
+  "founder": {
+    "@type": "Person",
+    "name": "Chef CP"
+  },
+  "areaServed": "Dallas\u2013Fort Worth",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  },
+  "servesCuisine": [
+    "Southern",
+    "Comfort Food",
+    "Fine Dining"
+  ],
+  "priceRange": "$$$",
+  "image": [
+    "https://ttpkitchen.com/assets/logo-ttp-transparent.png",
+    "https://ttpkitchen.com/assets/chef-plating.jpg",
+    "https://ttpkitchen.com/assets/chef-portrait.jpg"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/ttp_kitchen",
+    "https://ig.me/m/ttp_kitchen"
+  ]
+}
+</script>
+  <noscript><style>.anim{opacity:1!important;transform:none!important;filter:none!important}</style></noscript>
+</head>
+
+<body class="page">
+  <div class="fx fx-grain" aria-hidden="true"></div>
+  <div class="fx fx-vignette" aria-hidden="true"></div>
+
+  <!-- Single sticky system = bottom bar (mobile). Header is NOT sticky -->
+  
+
+  <main id="top" role="main">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy reveal anim">
+          <img class="heroLogo reveal heroLogo--enter anim" src="assets/logo-ttp-transparent.png" alt="TTP Kitchen logo" />
+
+<h1 class="h1">WHERE FINE DINING BECOMES A LIFESTYLE</h1>
+          <p class="sub">Southern soul. Classic comfort. Fine dining finesse — served with discipline.</p>
+
+          <div class="hooks" data-stagger="140" aria-label="Emotional hooks">
+            <div class="hook">Food that feels like home — looks like art.</div>
+            <div class="hook">Presence you can feel. Standard you can trust.</div>
+            <div class="hook">Legacy, one plate at a time.</div>
+          </div>
+
+          <!-- Experience selector -->
+          <div class="selector" role="group" aria-label="Pick your experience">
+            <button class="chip is-active" type="button" data-experience="Private Chef" aria-pressed="true">PRIVATE CHEF</button>
+            <button class="chip" type="button" data-experience="Catering" aria-pressed="false">CATERING</button>
+            <button class="chip" type="button" data-experience="Plate Drops" aria-pressed="false">PLATE DROPS</button>
+          </div>
+
+          <p id="experienceAssist" class="assist">For nights that deserve a memory.</p>
+
+          <!-- Max 2 hero CTAs -->
+          <div class="hero__cta">
+            <a id="heroSms" class="btn btn--gold" href="sms:+14698857589" aria-label="Text to lock in">TEXT TO LOCK IN</a>
+        
+      
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true">
+    <div class="toast__inner">
+      <span class="toast__dot" aria-hidden="true"></span>
+      <span id="toastText"></span>
+    </div>
+  </div>
+
+  <div id="focusOverlay" class="focusOverlay" aria-hidden="true"></div>
+
+  <script id="INLINE_FALLBACK_V11">
+  (function(){
+    const PHONE = "+14698857589";
+    const EMAIL = "info@ttpkitchen.com";
+    const qs = (s)=>document.querySelector(s);
+    const qsa = (s)=>Array.from(document.querySelectorAll(s));
+    const enc = (v)=>encodeURIComponent(v||"");
+    const isIOS = ()=> /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const smsHref = (body)=>{
+      const base = `sms:${PHONE}`;
+      return isIOS() ? `${base}&body=${enc(body)}` : `${base}?body=${enc(body)}`;
+    };
+    const mailHref = (subject, body)=> `mailto:${EMAIL}?subject=${enc(subject)}&body=${enc(body)}`;
+
+    const chips = qsa(".chip[data-experience]");
+    const expSelect = qs("#experience");
+    const elName = qs("#name");
+    const elUpdates = qs("#updates");
+    const elDate = qs("#date");
+    const elGuests = qs("#guests");
+    const elArea = qs("#area");
+    const elNotes = qs("#notes");
+
+    const heroSms = qs("#heroSms");
+    const heroEmail = qs("#heroEmail");
+    const startSms = qs("#startSms");
+    const startEmail = qs("#startEmail");
+    const barSms = qs("#barSms");
+
+    const toast = qs("#toast");
+    const toastText = qs("#toastText");
+    let toastTimer = null;
+    function showToast(msg){
+      if(!toast || !toastText) return;
+      toastText.textContent = msg;
+      toast.setAttribute("aria-hidden","false");
+      toast.classList.add("is-showing");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(()=>{
+        toast.classList.remove("is-showing");
+        toast.setAttribute("aria-hidden","true");
+      }, 1400);
+    }
+
+    function getExperience(){
+      return (expSelect && expSelect.value) || "Private Chef";
+    }
+
+    function buildBody(){
+      const exp = getExperience();
+      const name = elName?.value?.trim() || "";
+      const updates = elUpdates?.value?.trim() || "";
+      const date = elDate?.value || "";
+      const guests = elGue
+sts?.value || "";
+      const area = elArea?.value?.trim() || "";
+      const notes = elNotes?.value?.trim() || "";
+
+      let lines = [];
+      lines.push(`Hey Chef CP,`);
+      lines.push("");
+      lines.push(`Experience: ${exp}`);
+
+      if(exp === "Plate Drops"){
+        lines.push(`Name: ${name || ""}`);
+        lines.push(`Updates: ${updates || ""}`);
+      } else {
+        lines.push(`Date: ${date || ""}`);
+        lines.push(`Guests: ${guests || ""}`);
+        lines.push(`Area: ${area || ""}`);
+        lines.push(`Notes: ${notes || ""}`);
+      }
+      lines.push("");
+return lines.join("\n");
+    }
+
+    function refreshLinks(){
+      const body = buildBody();
+      const exp = getExperience();
+      const sms = smsHref(body);
+      const mail = mailHref(`TTP Kitchen — ${exp}`, body);
+
+      if(heroSms) heroSms.href = sms;
+      if(startSms) startSms.href = sms;
+      if(barSms) barSms.href = sms;
+
+      if(heroEmail) heroEmail.href = mail;
+      if(startEmail) startEmail.href = mail;
+    }
+
+    // chips clickable + sync select
+    chips.forEach((b)=>{
+      b.addEventListener("click", ()=>{
+        chips.forEach((x)=>{ x.classList.remove("is-active"); x.setAttribute("aria-pressed","false"); });
+        b.classList.add("is-active");
+        b.setAttribute("aria-pressed","true");
+        if(expSelect) expSelect.value = b.dataset.experience;
+        refreshLinks();
+        showToast("SET");
+      });
+    });
+
+    // select change
+    if(expSelect){
+      expSelect.addEventListener("change", ()=>{ refreshLinks(); showToast("SET"); });
+    }
+
+    // form input updates
+    ["input","change"].forEach((evt)=>{
+      [elName, elUpdates, elDate, elGuests, elArea, elNotes].filter(Boolean).forEach((el)=>{
+        el.addEventListener(evt, refreshLinks);
+      });
+    });
+
+    // CTA clicks: ensure refreshed before navigate
+    [heroSms,startSms,barSms].filter(Boolean).forEach((a)=>{
+      a.addEventListener("click", ()=>{ refreshLinks(); showToast("LOCKED"); });
+    });
+    [heroEmail,startEmail].filter(Boolean).forEach((a)=>{
+      a.addEventListener("click", ()=>{ refreshLinks(); showToast("LOCKED"); });
+    });
+
+    // initial
+    refreshLinks();
+  })();
+  </script>
+
+<footer class="footer" role="contentinfo">
+      <div class="wrap footer__inner">
+        <div>© <span id="year"></span> TTP Kitchen • Chef CP</div>
+        <div class="credit"><a href="https://hustleignite.pinkswann.com" target="_blank" rel="noopener">Site Developed by HCH</a></div>
+      </div>
+    </footer>
+</body>
+</html>
+
+
+
+
