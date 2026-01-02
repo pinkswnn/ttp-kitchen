@@ -1,4 +1,3 @@
-
 :root{
   --bg:#000;
   --ink:#fff;
@@ -440,16 +439,11 @@ textarea.input{ resize: vertical; }
   background: rgba(255,255,255,.05);
   transition: transform .18s var(--ease), background .18s var(--ease), border-color .18s var(--ease);
   text-decoration:none;
+  position:relative;
+  overflow:hidden;
 }
 .iconbtn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); }
-.iconbtn svg{ width:20px; height:20px; fill:none; stroke: currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; opacity:.92; }
-
-@media (max-width: 900px){
-  .cols{ grid-template-columns: 1fr; }
-  .span7,.span5{ grid-column:auto; }
-  .formgrid{ grid-template-columns: 1fr; }
-  .actions{ grid-template-columns: 1fr; }
-}
+.iconbtn svg{ width:20px; height:20px; fill: currentColor; opacity:.95; }
 
 /* Footer */
 .footer{
@@ -464,6 +458,13 @@ textarea.input{ resize: vertical; }
 .credit{ font-size:12px; letter-spacing:.08em; color: rgba(255,255,255,.62); }
 .credit a{ text-decoration:none; }
 
+@media (max-width: 900px){
+  .cols{ grid-template-columns: 1fr; }
+  .span7,.span5{ grid-column:auto; }
+  .formgrid{ grid-template-columns: 1fr; }
+  .actions{ grid-template-columns: 1fr; }
+}
+
 /* Sticky bar (single system) */
 .sticky{
   position:fixed; left:0; right:0; bottom:0; z-index:60;
@@ -474,7 +475,7 @@ textarea.input{ resize: vertical; }
 }
 .sticky__inner{
   display:grid;
-  grid-template-columns: 48px 1fr 44px;
+  grid-template-columns: 48px 1fr 44px 44px; /* ✅ now supports 2 icons */
   gap:10px;
   align-items:center;
 }
@@ -491,6 +492,22 @@ textarea.input{ resize: vertical; }
 @media (min-width: 901px){
   .sticky{ display:none; }
 }
+
+/* ✅ Colored brand icon styles */
+.iconbtn--ig{
+  color:#fff;
+  border-color: rgba(255,255,255,.14);
+  background:
+    radial-gradient(circle at 30% 110%, #feda75 0%, #fa7e1e 25%, #d62976 55%, #962fbf 75%, #4f5bd5 100%);
+}
+.iconbtn--ig:hover{ filter: brightness(1.03); }
+
+.iconbtn--fb{
+  color:#fff;
+  border-color: rgba(255,255,255,.14);
+  background: #1877F2;
+}
+.iconbtn--fb:hover{ filter: brightness(1.04); }
 
 /* Toast */
 .toast{
@@ -528,16 +545,12 @@ textarea.input{ resize: vertical; }
 /* Reveal: default visible; only hide when JS is running */
 .reveal{ opacity:1; transform:none; }
 
-
-
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   *{ transition:none !important; animation:none !important; }
-  
   .btn--gold::after{ display:none !important; }
 }
-
 
 /* Hooks (hero micro-cards) */
 .hooks{ display:grid; gap:10px; margin: 10px 0 4px; }
@@ -568,6 +581,7 @@ textarea.input{ resize: vertical; }
   font-weight: 900;
   letter-spacing: .12em;
   font-size: 12px;
+  min-width: 0;
 }
 .step:hover{ transform: translateY(-1px); }
 .step.is-active{ border-color: rgba(212,175,55,.40); background: rgba(212,175,55,.10); }
@@ -577,8 +591,17 @@ textarea.input{ resize: vertical; }
   background: rgba(0,0,0,.24);
   display:grid; place-items:center;
   letter-spacing:.10em;
+  flex: 0 0 auto;
 }
-.step__label{ color: rgba(255,255,255,.82); }
+
+/* ✅ prevent “SELECTION” spill: let label shrink + wrap safely on mobile */
+.step__label{
+  color: rgba(255,255,255,.82);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .ros__panel{
   border-radius: var(--r2);
@@ -607,9 +630,25 @@ textarea.input{ resize: vertical; }
   .ros__steps{
     grid-auto-flow: column;
     grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 10px;
   }
-  .step{ padding: 10px 10px; }
+  .step{
+    padding: 10px 10px;
+    justify-content:center;
+    flex-wrap: wrap; /* ✅ allow safe wrap */
+    row-gap: 8px;
+    min-width: 0;
+    text-align:center;
+  }
   .step__num{ width:42px; }
+  .step__label{
+    white-space: normal;          /* ✅ fixes spill */
+    overflow: visible;
+    text-overflow: unset;
+    letter-spacing: .10em;        /* ✅ slightly tighter for mobile */
+    font-size: 11px;              /* ✅ small nudge down */
+    line-height: 1.1;
+  }
   .needgrid{ grid-template-columns: 1fr; }
 }
 
@@ -623,8 +662,6 @@ textarea.input{ resize: vertical; }
   font-size: 12px;
 }
 
-
-
 /* V4 patch */
 .hero__logo{display:flex;justify-content:flex-start;margin-bottom:18px}
 .hero__logo img{width:clamp(170px,18vw,240px);max-width:240px;height:auto;filter:drop-shadow(0 10px 26px rgba(0,0,0,.62))}
@@ -633,8 +670,6 @@ textarea.input{ resize: vertical; }
 @media (max-width:900px){.input{font-size:16px}}
 .focusOverlay{ z-index:40; }
 .sticky{z-index:60}
-
-
 
 /* V5: Center alignment where it matters (mobile-first) */
 @media (max-width: 900px){
@@ -741,8 +776,6 @@ body{ padding-top: 0 !important; }
 .reveal{ opacity:1; transform:none; }
 html.reveal-on .reveal{ opacity:0; transform: translateY(10px); transition: opacity .55s var(--ease2), transform .55s var(--ease2); }
 html.reveal-on .reveal.is-visible{ opacity:1; transform:none; }
-
-
 
 /* V10: Ensure hero controls are clickable (no overlay capture) */
 .hero__copy{ position:relative; z-index: 5; }
