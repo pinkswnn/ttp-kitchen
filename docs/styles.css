@@ -1064,3 +1064,99 @@ html.reveal-on .reveal.is-visible{ opacity:1; transform:none; }
     border-radius:22px;
   }
 }
+
+/* V16: Premium Google Review CTA — gold stars, no third-party color treatment */
+.googleReview{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.055), rgba(255,255,255,.018)),
+    rgba(0,0,0,.42);
+  border-color:rgba(212,175,55,.30);
+  box-shadow:
+    0 16px 38px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,255,255,.045);
+}
+
+.googleReview::before{
+  background:
+    radial-gradient(240px 120px at 12% 18%, rgba(212,175,55,.11), transparent 68%),
+    radial-gradient(260px 130px at 92% 100%, rgba(245,215,110,.07), transparent 70%);
+  opacity:1;
+}
+
+.googleReview:hover,
+.googleReview:focus-visible{
+  border-color:rgba(245,215,110,.62);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.075), rgba(212,175,55,.045)),
+    rgba(0,0,0,.46);
+  box-shadow:
+    0 22px 52px rgba(0,0,0,.48),
+    0 0 0 3px rgba(212,175,55,.08),
+    0 0 34px rgba(212,175,55,.15);
+}
+
+.googleReview__icon{
+  display:none !important;
+}
+
+.googleReview__stars{
+  flex:0 0 auto;
+  color:var(--gold2);
+  font-size:clamp(20px, 2.35vw, 30px);
+  font-weight:900;
+  line-height:1;
+  letter-spacing:.07em;
+  white-space:nowrap;
+  text-shadow:
+    0 0 12px rgba(212,175,55,.25),
+    0 0 28px rgba(212,175,55,.10);
+  transform-origin:center;
+  transition:
+    transform .24s var(--ease),
+    filter .24s var(--ease);
+}
+
+.googleReview:hover .googleReview__stars,
+.googleReview:focus-visible .googleReview__stars{
+  transform:scale(1.055);
+  filter:brightness(1.08);
+}
+
+.googleReview__text strong{
+  letter-spacing:.01em;
+}
+
+@media (max-width:640px){
+  .googleReview{
+    align-items:center;
+  }
+
+  .googleReview__stars{
+    font-size:20px;
+    letter-spacing:.045em;
+  }
+}
+
+@media (max-width:420px){
+  .googleReview{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:8px 12px;
+  }
+
+  .googleReview__stars{
+    grid-column:1 / -1;
+    justify-self:start;
+    font-size:19px;
+  }
+
+  .googleReview__text{
+    grid-column:1;
+  }
+
+  .googleReview__arrow{
+    grid-column:2;
+    grid-row:2;
+    align-self:center;
+  }
+}
