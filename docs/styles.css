@@ -218,6 +218,216 @@ main{ position:relative; z-index:1; }
 
 .hero__cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 10px; }
 
+/* V14: Google Review CTA — premium, obvious, and mobile-safe */
+.googleReview{
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  width:min(100%, 560px);
+  margin:18px auto 0;
+  padding:15px 18px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:18px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.075), rgba(255,255,255,.025)),
+    rgba(0,0,0,.30);
+  color:var(--ink);
+  text-decoration:none;
+  text-align:left;
+  box-shadow:
+    0 16px 38px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.05);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  overflow:hidden;
+  isolation:isolate;
+  cursor:pointer;
+  transform:translateZ(0);
+  transition:
+    transform .22s var(--ease),
+    border-color .22s var(--ease),
+    background .22s var(--ease),
+    box-shadow .22s var(--ease);
+}
+
+.googleReview::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(220px 120px at 10% 10%, rgba(66,133,244,.13), transparent 66%),
+    radial-gradient(220px 120px at 90% 90%, rgba(212,175,55,.12), transparent 68%);
+  opacity:.82;
+  pointer-events:none;
+}
+
+.googleReview::after{
+  content:"";
+  position:absolute;
+  top:-65%;
+  bottom:-65%;
+  left:-38%;
+  width:28%;
+  z-index:-1;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.20),
+    transparent
+  );
+  transform:rotate(14deg) translateX(-160%);
+  pointer-events:none;
+}
+
+.googleReview:hover,
+.googleReview:focus-visible{
+  transform:translateY(-3px);
+  border-color:rgba(245,215,110,.58);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.095), rgba(212,175,55,.045)),
+    rgba(0,0,0,.34);
+  box-shadow:
+    0 20px 48px rgba(0,0,0,.46),
+    0 0 0 3px rgba(212,175,55,.08),
+    0 0 30px rgba(212,175,55,.14);
+  outline:none;
+}
+
+.googleReview:hover::after,
+.googleReview:focus-visible::after{
+  animation:googleReviewSweep .85s var(--ease2) both;
+}
+
+.googleReview:active{
+  transform:translateY(-1px) scale(.995);
+}
+
+.googleReview__icon{
+  width:50px;
+  height:50px;
+  flex:0 0 50px;
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.28));
+}
+
+.googleReview__text{
+  min-width:0;
+  display:flex;
+  flex:1 1 auto;
+  flex-direction:column;
+  gap:3px;
+  line-height:1.25;
+}
+
+.googleReview__top{
+  color:rgba(255,255,255,.68);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.googleReview__text strong{
+  color:#fff;
+  font-size:clamp(14px, 1.5vw, 17px);
+  font-weight:900;
+  letter-spacing:.02em;
+}
+
+.googleReview__arrow{
+  width:24px;
+  height:24px;
+  flex:0 0 24px;
+  color:var(--gold2);
+  filter:drop-shadow(0 0 10px rgba(245,215,110,.22));
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .googleReview{
+    animation:googleReviewPulse 2.8s ease-in-out infinite;
+  }
+
+  .googleReview__arrow{
+    animation:googleReviewArrow 1.45s var(--ease) infinite;
+  }
+
+  @keyframes googleReviewPulse{
+    0%,100%{
+      border-color:rgba(255,255,255,.14);
+      box-shadow:
+        0 16px 38px rgba(0,0,0,.34),
+        0 0 0 0 rgba(212,175,55,0);
+    }
+    50%{
+      border-color:rgba(212,175,55,.34);
+      box-shadow:
+        0 18px 42px rgba(0,0,0,.38),
+        0 0 0 5px rgba(212,175,55,.055);
+    }
+  }
+
+  @keyframes googleReviewArrow{
+    0%,100%{ transform:translateX(0); }
+    50%{ transform:translateX(5px); }
+  }
+
+  @keyframes googleReviewSweep{
+    from{ transform:rotate(14deg) translateX(-160%); }
+    to{ transform:rotate(14deg) translateX(620%); }
+  }
+}
+
+@media (max-width:640px){
+  .googleReview{
+    gap:12px;
+    padding:14px;
+    border-radius:16px;
+  }
+
+  .googleReview__icon{
+    width:44px;
+    height:44px;
+    flex-basis:44px;
+  }
+
+  .googleReview__top{
+    font-size:9px;
+    letter-spacing:.13em;
+  }
+
+  .googleReview__text strong{
+    font-size:14px;
+    line-height:1.28;
+  }
+
+  .googleReview__arrow{
+    width:22px;
+    height:22px;
+    flex-basis:22px;
+  }
+}
+
+@media (max-width:380px){
+  .googleReview{
+    gap:10px;
+    padding:13px 12px;
+  }
+
+  .googleReview__icon{
+    width:40px;
+    height:40px;
+    flex-basis:40px;
+  }
+
+  .googleReview__arrow{
+    width:20px;
+    height:20px;
+    flex-basis:20px;
+  }
+}
+
+
 .hero__media{
   position:relative;
   min-height: 420px;
