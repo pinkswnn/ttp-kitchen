@@ -1020,3 +1020,47 @@ html.reveal-on .reveal.is-visible{ opacity:1; transform:none; }
   color: rgba(255,255,255,.56);
   text-decoration-color: rgba(255,255,255,.34);
 }
+
+/* V15: Executive Seasoning hero image — full mobile artwork, no dark mask */
+.hero__overlay,
+.hero__spotlight{
+  display:none !important;
+}
+
+.hero__media{
+  background:#000;
+}
+
+.hero__img{
+  filter:brightness(1.10) contrast(1.10) saturate(1.16);
+}
+
+@media (max-width:900px){
+  .hero__media{
+    min-height:0;
+    height:auto;
+    aspect-ratio:auto;
+    margin-top:12px;
+    border-radius:var(--r2);
+    overflow:hidden;
+    background:#000;
+  }
+
+  .hero__img{
+    position:relative;
+    inset:auto;
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+    object-position:center;
+    transform:none;
+    filter:brightness(1.12) contrast(1.11) saturate(1.18);
+  }
+}
+
+@media (max-width:520px){
+  .hero__media{
+    border-radius:22px;
+  }
+}
