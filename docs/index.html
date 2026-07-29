@@ -6,8 +6,14 @@
   <title>TTP Kitchen | Chef CP</title>
   <meta name="description" content="WHERE FINE DINING BECOMES A LIFESTYLE. Southern soul, classic comfort, fine dining finesse — served with discipline." />
   <meta name="theme-color" content="#000000" />
-  <link rel="stylesheet" href="styles.css?v=16" />
-  <script defer src="app.js?v=16"></script>
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TTP Kitchen | Chef CP" />
+  <meta property="og:description" content="Southern soul, classic comfort, and fine dining finesse. Book Chef CP or shop The Executive signature seasoning." />
+  <meta property="og:image" content="assets/chef-exec-season.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="styles.css?v=17" />
+  <script defer src="app.js?v=17"></script>
 
   <script type="application/ld+json">
   {
@@ -114,9 +120,97 @@
             class="hero__img"
             src="assets/chef-exec-season.jpg"
             alt="The Executive signature seasoning by TTP Kitchen"
+            width="1200"
+            height="1500"
+            fetchpriority="high"
+            decoding="async"
           />
           <div class="hero__overlay" aria-hidden="true"></div>
           <div class="hero__spotlight" aria-hidden="true"></div>
+
+          <article
+            class="heroProduct"
+            aria-labelledby="heroProductTitle"
+            aria-describedby="heroProductNote"
+          >
+            <div class="heroProduct__eyebrow">
+              <svg
+                class="heroProduct__spark"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M12 2.75 13.8 8.2 19.25 10 13.8 11.8 12 17.25 10.2 11.8 4.75 10 10.2 8.2 12 2.75Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="m18.25 15.5.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9.9-2.6Z"
+                  fill="currentColor"
+                  opacity=".72"
+                ></path>
+              </svg>
+              <span>SIGNATURE SEASONING</span>
+            </div>
+
+            <h2 id="heroProductTitle" class="heroProduct__title">
+              THE EXECUTIVE
+            </h2>
+
+            <p id="heroProductNote" class="heroProduct__note">
+              Bring Chef CP’s signature flavor into your own kitchen.
+            </p>
+
+            <a
+              id="heroPurchase"
+              class="btn btn--gold heroProduct__buy"
+              href="https://square.link/u/N3gkysjx"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Purchase The Executive signature seasoning through Square"
+            >
+              <svg
+                class="heroProduct__cart"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M3 4h2.1l1.35 9.2a2 2 0 0 0 1.98 1.71h7.88a2 2 0 0 0 1.92-1.44L20 7H6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M9 20a1.25 1.25 0 1 0 0-2.5A1.25 1.25 0 0 0 9 20Zm8 0a1.25 1.25 0 1 0 0-2.5A1.25 1.25 0 0 0 17 20Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              <span class="heroProduct__buyText">
+                <strong>SHOP THE EXECUTIVE</strong>
+                <small>Secure checkout through Square</small>
+              </span>
+
+              <svg
+                class="heroProduct__arrow"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M5 12h12M13 6l6 6-6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </a>
+          </article>
         </div>
 
       </div>
@@ -261,9 +355,9 @@
                 <div class="full">
                   <label class="label" for="experience">Experience</label>
                   <select id="experience" class="input" aria-label="Experience">
-                    <option value="Private Chef">Private Chef</option>
-                    <option value="Catering">Catering</option>
-                    <option value="Plate Drops">Plate Drops</option>
+                    <option value="Private Chef" style="color:#111;background:#fff;">Private Chef</option>
+                    <option value="Catering" style="color:#111;background:#fff;">Catering</option>
+                    <option value="Plate Drops" style="color:#111;background:#fff;">Plate Drops</option>
                   </select>
                   <div class="hint" id="experienceHint" aria-live="polite"></div>
                 </div>
@@ -288,38 +382,38 @@
                 <div id="fieldGuestsWrap" class="full">
                   <label class="label" for="guests">Guests</label>
                   <select id="guests" class="input">
-                    <option value="">Select</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31+">31+</option>
+                    <option value="" style="color:#111;background:#fff;">Select</option>
+                    <option value="1" style="color:#111;background:#fff;">1</option>
+                    <option value="2" style="color:#111;background:#fff;">2</option>
+                    <option value="3" style="color:#111;background:#fff;">3</option>
+                    <option value="4" style="color:#111;background:#fff;">4</option>
+                    <option value="5" style="color:#111;background:#fff;">5</option>
+                    <option value="6" style="color:#111;background:#fff;">6</option>
+                    <option value="7" style="color:#111;background:#fff;">7</option>
+                    <option value="8" style="color:#111;background:#fff;">8</option>
+                    <option value="9" style="color:#111;background:#fff;">9</option>
+                    <option value="10" style="color:#111;background:#fff;">10</option>
+                    <option value="11" style="color:#111;background:#fff;">11</option>
+                    <option value="12" style="color:#111;background:#fff;">12</option>
+                    <option value="13" style="color:#111;background:#fff;">13</option>
+                    <option value="14" style="color:#111;background:#fff;">14</option>
+                    <option value="15" style="color:#111;background:#fff;">15</option>
+                    <option value="16" style="color:#111;background:#fff;">16</option>
+                    <option value="17" style="color:#111;background:#fff;">17</option>
+                    <option value="18" style="color:#111;background:#fff;">18</option>
+                    <option value="19" style="color:#111;background:#fff;">19</option>
+                    <option value="20" style="color:#111;background:#fff;">20</option>
+                    <option value="21" style="color:#111;background:#fff;">21</option>
+                    <option value="22" style="color:#111;background:#fff;">22</option>
+                    <option value="23" style="color:#111;background:#fff;">23</option>
+                    <option value="24" style="color:#111;background:#fff;">24</option>
+                    <option value="25" style="color:#111;background:#fff;">25</option>
+                    <option value="26" style="color:#111;background:#fff;">26</option>
+                    <option value="27" style="color:#111;background:#fff;">27</option>
+                    <option value="28" style="color:#111;background:#fff;">28</option>
+                    <option value="29" style="color:#111;background:#fff;">29</option>
+                    <option value="30" style="color:#111;background:#fff;">30</option>
+                    <option value="31+" style="color:#111;background:#fff;">31+</option>
                   </select>
                   <div class="hint" id="guestsHint"></div>
                 </div>
@@ -441,7 +535,7 @@
 
   <div id="focusOverlay" class="focusOverlay" aria-hidden="true"></div>
 
-  <script id="INLINE_FALLBACK_V16">
+  <script id="INLINE_FALLBACK_V17">
   (function(){
     const PHONE = "+14698857589";
     const EMAIL = "info@ttpkitchen.com";
@@ -603,6 +697,14 @@
           showToast("LOCKED");
         });
       });
+
+    const heroPurchase = qs("#heroPurchase");
+
+    if(heroPurchase){
+      heroPurchase.addEventListener("click", () => {
+        showToast("OPENING SECURE CHECKOUT");
+      });
+    }
 
     refreshLinks();
   })();
